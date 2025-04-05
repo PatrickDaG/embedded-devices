@@ -56,7 +56,7 @@ mod tests {
     fn register_defaults() {
         use crate::devices::texas_instruments::ina228::registers::AdcConfiguration;
         let reg = AdcConfiguration::default();
-        assert_eq!(reg.read_enable_temperature(), true);
+        assert!(reg.read_enable_temperature());
     }
 
     // FIXME: once bondrewd #[test]

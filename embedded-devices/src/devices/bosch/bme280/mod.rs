@@ -130,8 +130,6 @@ pub struct BME280Common<I: RegisterInterface, const IS_BME: bool> {
 pub type BME280<I> = BME280Common<I, true>;
 
 /// Common configuration values for the BME280 sensor.
-/// The power-on-reset default is to set all oversampling settings to 1X
-/// and use no IIR filter.
 #[derive(Debug, Clone, Default)]
 pub struct Configuration {
     /// The oversampling rate for temperature mesurements
